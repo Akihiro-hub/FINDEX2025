@@ -203,7 +203,7 @@ WB_INDICATORS = {
 @st.cache_data
 def load_findex_data():
     try:
-        df = pd.read_excel('attached_assets/Findex2025_1760415783997.xlsx', sheet_name='Data')
+        df = pd.read_excel('Findex2025_1760415783997.xlsx', sheet_name='Data')
         df['Economy_JP'] = df['Economy'].map(COUNTRY_MAP)
         df = df.dropna(subset=['Economy_JP'])
         return df
